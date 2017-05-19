@@ -12,9 +12,9 @@ location = ' '.join(sys.argv[1:])
 # API key is needed nowadays, signed up and got it!
 # API key 96aa362993428ca5c08799d2047013fe
 
-#url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=%s&cnt=3&APPID=96aa362993428ca5c08799d2047013fe' % (location)
+#url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=%s&cnt=3&APPID=number' % (location)
 # Rewritten line into new way of defining strings
-url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q={}&cnt=3&APPID=96aa362993428ca5c08799d2047013fe'.format(location)
+url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q={}&cnt=3&APPID=number'.format(location)
 response = requests.get(url)
 response.raise_for_status()
 
